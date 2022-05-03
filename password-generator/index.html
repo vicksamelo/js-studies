@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Password Generator</title>
+    <!-- CSS files -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="style.css">
+
+
+<body>
+    <video autoplay="" loop="" muted="" src="clouds.mp4"></video>
+  <div class="container login-container card glass-card">
+    <div class="row card-body mt-auto">
+          <div class="col-md-6 m-auto text-center">
+            <lottie-player class="img-fluid m-auto" src="https://assets10.lottiefiles.com/packages/lf20_xf9ppc6p.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+          </div>
+          <div class="col-md-6 login-form-2">
+            <div>
+                <h2>Password Generator</h2>
+                <div class="result-container">
+                    <span id="result"></span>
+                    <button class="btn" id="clipboard">
+                        <i class="far fa-clipboard"></i>
+                    </button>
+                </div>
+                <div class="settings">
+                    <div class="setting">
+                        <label>Password length</label>
+                        <input type="number" id="length" min='4' max='20' value='20' />
+                    </div>
+                    <div class="setting">
+                        <label>Include uppercase letters</label> 
+                        <input class="check" type="checkbox" id="uppercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Include lowercase letters</label> 
+                        <input class="check" type="checkbox" id="lowercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Include numbers</label> 
+                        <input class="check" type="checkbox" id="numbers" checked />
+                    </div>
+                    <div class="setting">
+                        <label>Include symbols</label> 
+                        <input class="check" type="checkbox" id="symbols" checked />
+                    </div>
+                </div>
+                <button class="btn btn-large" id="generate">
+                    Generate password
+                </button>
+            </div>
+            
+      </div>
+    
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a0edaf4e67.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+  padding: 30px;
+  background-size: cover;
+  color: #000;
+  font-weight: 600;
+}
+
+video {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  height: 106%;
+  width: 100%;
+  object-fit: cover;
+}
+
+lottie-player {
+  width: 12rem;
+}
+
+@media (min-width: 577px) {
+  .login-container form {
+    padding: 10%;
+  }
+
+  lottie-player {
+    width: 450px;
+  }
+}
+
+input {
+  border-radius: 10px !important;
+}
+
+.setting #uppercase input:checked {
+  background-color: #ffc100 !important;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 230, 0, 0.25) !important;
+  border: none !important;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+input[type='checkbox'] {
+  margin-right: 0;
+}
+
+.result-container {
+  background-color: #fff3d081;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #ffc100;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .result-container {
+    font-size: 14px;
+  }
+}
