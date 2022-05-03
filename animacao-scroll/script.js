@@ -79,7 +79,7 @@ function initAnimationScroll() {
     function animaScroll() {
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top - 500; //esse método retorna o tamanho de um elemento e sua posição relativa ao viewport
-        const isSectionVisible = sectionTop - windowMetade < 0; // true ou false
+        const isShttps://drive.google.com/drive/u/0/folders/1fZOMUoTuFgNlp_dl-K4mSSciEqo8AzrJectionVisible = sectionTop - windowMetade < 0; // true ou false
         if (isSectionVisible) {
           section.classList.add('ativo');
         }
