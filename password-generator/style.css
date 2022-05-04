@@ -1,6 +1,5 @@
 body {
-  padding: 30px;
-  background-size: cover;
+  height: 100vh;
   color: #000;
   font-weight: 600;
 }
