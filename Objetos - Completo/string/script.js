@@ -97,11 +97,119 @@ listaPrecos2.forEach((preco) => {
 listaPrecos2[0].padStart(10, '.'); // .....R$ 99
 listaPrecos2[0].padEnd(10, '.'); // R$ 99.....
 
-// Divide a string de acordo com o padrão passado e retorna uma array.
+//Troca parte da string por outra. Podemos utilizar uma regular expression ou um valor direto.
+//Se usarmos um valor direto ele irá trocar apenas o primeiro valor que encontrar.
 
-const listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
-const arrayItens = listaItens.split(' ');
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+
+listaItens = listaItens.replace('Camisas', 'Shirts');
+
+listaItens = listaItens.replace(/[ ]+/g, ', '); //+/g -> essa expressao faz buscar todos os
+//caracteres globalmente
+console.log(listaItens);
+
+// Divide a string de acordo com o padrão passado e retorna uma array.
+const arrayLista = listaItens.split('s, '); //remove "s," e quebra no espaco
+console.log(arrayLista);
 
 const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
 const htmlArray = htmlText.split('div');
 const htmlNovo = htmlArray.join('section');
+
+console.log(htmlText);
+console.log(htmlArray);
+console.log(htmlNovo);
+
+//Retorna a string em letras maiúsculas ou minúsculas. Bom para verificarmos input de usuários.
+const sexo1 = 'Feminino';
+const sexo2 = 'feminino';
+const sexo3 = 'FEMININO';
+
+console.log(sexo1.toLowerCase() === 'feminino'); //transforma em lowercase p
+//n dar erro de verificacao
+
+//Remove espaço em branco do início ou final de uma string.
+const valor = '  R$ 23.00   ';
+valor.trim(); // 'R$ 23.00'
+valor.trimStart(); // 'R$ 23.00   '
+valor.trimEnd(); // '  R$ 23.00'
+
+//-------------------------------------------EXERCICIOS---------------------------------------
+
+// Utilizando o foreach na array abaixo,
+// some os valores de Taxa e os valores de Recebimento
+
+const transacoes = [
+  //isso aqui eh uma array com varios objetos
+  {
+    descricao: 'Taxa do Pão',
+    valor: 'R$ 39',
+  },
+  {
+    descricao: 'Taxa do Mercado',
+    valor: 'R$ 129',
+  },
+  {
+    descricao: 'Recebimento de Cliente',
+    valor: 'R$ 99',
+  },
+  {
+    descricao: 'Taxa do Banco',
+    valor: 'R$ 129',
+  },
+  {
+    descricao: 'Recebimento de Cliente',
+    valor: 'R$ 49',
+  },
+];
+
+let taxaTotal = 0;
+let recebimentoTotal = 0;
+transacoes.forEach((item) => {
+  const numeroLimpo = +item.valor.replace('R$ ', '');
+  if (item.descricao.slice(0, 4) === 'Taxa') {
+    taxaTotal += +numeroLimpo; //(o + na frente de uma string transforma ele em numero)
+  } else {
+    recebimentoTotal += +numeroLimpo;
+  }
+});
+
+console.log(taxaTotal);
+console.log(recebimentoTotal);
+
+// Retorne uma array com a lista abaixo
+const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
+const arrayTransportes = transportes.split(';');
+console.log(arrayTransportes);
+
+// Substitua todos os span's por a's
+let html = `<ul>
+                <li><span>Sobre</span></li>
+                <li><span>Produtos</span></li>
+                <li><span>Contato</span></li>
+              </ul>`;
+
+html = html.split('span').join('a');
+console.log(html);
+
+// Retorne o último caracter da frase
+const sentence = 'Melhor do ano!';
+console.log(sentence[sentence.length - 1]);
+
+// Retorne o total de taxas
+const transacoes2 = [
+  'Taxa do Banco',
+  '   TAXA DO PÃO',
+  '  taxa do mercado',
+  'depósito Bancário',
+  'TARIFA especial',
+];
+
+let totalTaxas2 = 0;
+transacoes2.forEach((item) => {
+  item = item.toLowerCase().trim().slice(0, 4);
+  if (item === 'taxa') {
+    totalTaxas2++;
+  }
+});
+console.log(totalTaxas2);
